@@ -1,0 +1,33 @@
+body {
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Orbitron', sans-serif;
+  /*background-color: #f2e6ff;*/
+}
+
+.subtitle h4{
+  color: gray;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Indie Flower', cursive;
+
+  font-size: 26px;
+  margin: 0 0 0 0;
+}
+
+.botIcon {
+  width: 80px !important;
+}
+#header .row.title {
+  padding: 20px 0 0 20px;
+}
+
+#header h1 {
+  font-size: 75px;
+    font-weight: bold;
+    color: #c7adff;
+    /*text-shadow: 2px 2px #f2e6ff;*/
+    text-shadow: 2px 2px gray;
+}
+
+hr {
+      border-top: 4px solid #eee;
+}
