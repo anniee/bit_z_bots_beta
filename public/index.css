@@ -1,27 +1,55 @@
 body {
   /*font-family: 'Lato', sans-serif;*/
   font-family: 'Orbitron', sans-serif;
+
+  background-image: url('static/gearscogs.png');
+/*  height: 400px;
+  width: 400px;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: ;
+  background-position: right top;
   /*background-color: #f2e6ff;*/
+  /*background-image: url('static/gearscogs.png');*/
+  /*background-size: 50% 50%;*/
+/*      background-position: bottom 0px left 7px;
+   background-repeat: no-repeat;*/
 }
+
+/*.botsCogs {
+  background-image: url('static/gearscogs.png');
+  height: 400px;
+  width: 400px;
+}*/
+
+/*#content {
+  height: 800px;
+  background-image: url('static/gearscogs.png');
+  height: 400px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right center;
+}*/
 
 .subtitle h4{
   color: gray;
     /*font-family: 'Lato', sans-serif;*/
-    font-family: 'Indie Flower', cursive;
-
-  font-size: 26px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 46px;
   margin: 0 0 0 0;
 }
 
 .botIcon {
-  width: 80px !important;
+  width: 100px !important;
 }
 #header .row.title {
+  white-space: nowrap;
   padding: 20px 0 0 20px;
 }
 
 #header h1 {
-  font-size: 75px;
+  font-size: 100px;
     font-weight: bold;
     color: #c7adff;
     /*text-shadow: 2px 2px #f2e6ff;*/
@@ -30,4 +58,26 @@ body {
 
 hr {
       border-top: 4px solid #eee;
+}
+
+.botsIrl {
+  width: 200px;
+}
+
+ul {
+  margin-left: 50px;
+    margin-top: 50px;
+
+}
+
+li {
+  /*float: right;*/
+  background-color: #cfcffe;
+  border-radius: 2px;
+  padding: 20px;
+  display: inline;
+}
+
+.inlineImages {
+  display: inline;
 }

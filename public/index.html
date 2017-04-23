@@ -14,27 +14,54 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="/script.js"></script>
   </head>
   <body>
-
-    <script>
-      angular.module('bitzbotsApp', [])
-      .controller('BitzHomepageController', function() {
-        var vm = this;
-        vm.hello = "hello";
-        console.log('hello from bitz controller');
-      });
-    </script>
+    <!-- TODO: abstract script to main js -->
+<!--       // angular.module('bitzbotsApp', ['ngRoute'])
+      // // .config(['$routeProvider',
+      // //   function($routeProvider){
+      // //   .when('/', {
+      // //       templateUrl: 'index.html',
+      // //       controller: 'BitzHomepageController',
+      // //       controllerAs: 'home'
+      // //   })
+      // //   .when("/makestation", {
+      // //       templateUrl : "makestation.html"
+      // //   });
+      // // })
+      // .controller('BitzHomepageController', function() {
+      //   var vm = this;
+      //   vm.hello = "hello";
+      //   console.log('hello from bitz controller');
+      // }); -->
     <div id="landing" class="container-fluid" ng-controller="BitzHomepageController as bitzHomeCtrl">
       <div id="header">
         <div class="row title">
-          <img src="./static/boticonsmall.png" class="botIcon col-sm-2">
+          <img src="./static/boticonsmall.png" class="botIcon col-sm-2 col-sm-offset-1">
           <h1 class="col-sm-6">BIT-Z-BOTS</h1>
         </div>
-        <div class="row col-sm-offset-4 subtitle">
+        <div class="row col-sm-offset-2 subtitle">
           <h4>make your own 3D-printed robot figurine</h1>
         </div>
-        <hr>
+        <!-- <hr> -->
+
+        <div class="bitzNavbar">
+          <ul>
+            <li href="/">home</li>
+            <li href="#/makestation">makestation</li>
+            <li>gallery</li>
+            <li>about</li>
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <img src="./static/botsirl.png" class="inlineImages botsIrl col-sm-offset-1">
+  <!--       <img src="./static/gearscogs.png" class="inlineImages col-sm-offset-2"> -->
+        <div class="botsCogs"></div>
+      </div>
+<!-- <img src="./static/gearscogs.png" class="inlineImages botsCogs col-sm-offset-2"> -->
 <!--       </div>
       <h1>Welcome to BitzBots</h1>
       <div>{{bitzHomeCtrl.hello}}</div> -->
