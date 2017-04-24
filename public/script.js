@@ -4,15 +4,15 @@ angular.module('bitzbotsApp', ['ngRoute'])
 .config(['$routeProvider','$locationProvider',
   function($routeProvider, $locationProvider){
   $routeProvider
-    .when('/#/', {
-        templateUrl: 'index.html',
+    .when('/', {
+        templateUrl: 'home.html',
         controller: 'BitzHomepageController',
         controllerAs: 'homeCtrl'
     })
     .when('/makestation', {
         templateUrl: 'makestation.html',
         controller: 'MakestationController',
-        controllerAs: 'makeCtrl'
+        controllerAs: 'makeCtrl',
     });
     $locationProvider.html5Mode({
       enabled: true,
