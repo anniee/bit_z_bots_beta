@@ -46,8 +46,8 @@ ul {
 li {
   box-shadow: 1px 1px 5px #888888;
   font-size: 25px;
-  /*background-color: #cfcffe;*/
-  background-color: lavender;
+  background-color: #cfcffe;
+  /*background-color: lavender;*/
   border-radius: 2px;
   padding: 25px 20px 20px 20px;
   display: inline;
@@ -90,7 +90,6 @@ a:hover {
 
 #faceCarousel {
   width: 500px !important;
-  background-color: red;
 }
 .carousel {
   width: 500px !important;
@@ -98,4 +97,8 @@ a:hover {
 
 .beRed {
   background-color: red;
+}
+
+.makeButton {
+  padding-left: 300px;
 }

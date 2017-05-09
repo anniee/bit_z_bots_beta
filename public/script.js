@@ -25,8 +25,14 @@ angular.module('bitzbotsApp', ['ngRoute'])
   vm.hello = "hello";
   console.log('hello from bitz controller');
 })
-.controller('MakestationController', function() {
+.controller('MakestationController', ['$location', function($location) {
   var vm = this;
   vm.hello = "hello";
+  vm.bot = {};
+  vm.make = function(bot) {
+    console.log('MAKING', bot);
+    // make this route to made place where can download stl and submit email
+    // $location.path('/home');
+  }
   console.log('hello from make controller');
-});
+}]);
