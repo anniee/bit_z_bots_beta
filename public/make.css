@@ -1,3 +1,14 @@
 .faceCtrl {
   margin-bottom: 400px;
 }
+
+.botMakerForm {
+  display: flex !important;
+}
+
+/*#bitzbotMaker {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/

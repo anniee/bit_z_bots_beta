@@ -70,10 +70,19 @@ angular.module('bitzbotsApp', ['ngRoute'])
   var vm = this;
   vm.hello = "hello";
   vm.bot = {};
+  vm.faceIsReady = false;
   vm.make = function(bot) {
     bitzbotService.makeBot(bot);
     $location.path('/bitzprint');
   };
+
+  // todo this needs to be a toggle
+  vm.selectedFace = function(){
+    console.log(vm.faceIsReady);
+    console.log('you selected a face');
+    vm.faceIsReady = true;
+    console.log(vm.faceIsReady);
+  }
   // vm.make = function(bot) {
   //   console.log('MAKING', bot);
   //   $location.path('/bitzprint');
@@ -89,3 +98,5 @@ angular.module('bitzbotsApp', ['ngRoute'])
   // vm.bot = $scope.bot;
   // console.log('SCOPE', $scope);
 }]);
+
+// TODO add on click toggle selected outline class on bot parts
