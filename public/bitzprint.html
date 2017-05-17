@@ -1,5 +1,17 @@
-<h2 ng-controller="BitzprintController as printCtrl">
-  Download to print your bot! {{printCtrl.bot}}
-  <img src="./static/{{printCtrl.bot}}.png"/>
-  <a href="./111.stl" target="_self">Download Link</a>
-</h2>
+<div class="madeBotWrapper">
+    <img src="./static/{{printCtrl.bot}}.png"/>
+<div>
+
+
+
+<h2>
+  Download to print your Bit-z-bot! {{printCtrl.bot}}
+  <a href="./111.stl" target="_self">Download Link</a></h2>
+  <!-- name your bitzbot -->
+<!-- todo ask for email input here -->
+<form>
+  Enter your email: <input type="text" ng-model="printCtrl.userEmail">
+  <!-- <input type="submit" value="Submit"> -->
+<a href="mailto:anne.bitzbots@gmail.com?Subject=Print%20{{printCtrl.bot}}%20from%20MakerFaire&Body=Hi, please print BitzBot for {{printCtrl.userEmail}}"target="_top">Send your Bit-z-bot via email (so you can print it at home!)</a>
+
+</form>

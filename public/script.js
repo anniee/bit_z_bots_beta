@@ -140,6 +140,7 @@ angular.module('bitzbotsApp', ['ngRoute'])
 }])
 .controller('BitzprintController', ['$scope', 'bitzbotService', function($scope, bitzbotService) {
   var vm = this;
+  var userEmail;
   this.bot = bitzbotService.getBot();
   console.log('THIS BOT', this.bot);
   console.log('hello from print controller');
