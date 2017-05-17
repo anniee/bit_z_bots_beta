@@ -145,20 +145,23 @@ hr {
 }
 
 form {
-  border: 10px solid gray;
+  margin: 30px 0 50px 0;
   border-top: 30px;
   border-right: 250px;
   border-bottom: 10px;
   border-left: 350px;
   border-color: gray;
   border-style: solid;
-  border-radius: 6px;
-}
+  border-radius: 40px;
+  box-shadow: -10px -2px 9px rgba(0, 0, 0, 0.7), -4px -4px 20px rgba(0, 0, 0, 0.4);}
 
 .item {
   padding: 10px;
   background-color: #B3B3B3;
-  border-bottom: 35px solid darkgray;
+  border: 10px ridge darkgray;
+  border-bottom: 40px solid darkgray;
+/*  border: 1px solid black;
+  border-bottom: 35px solid darkgray;*/
 }
 /*.bitzbotMakerContent {
   display: flex;
@@ -173,16 +176,16 @@ form {
   align-items: center;
 }
 
-.makerInstructionsSelect {
-  font-size: 25px;
+/*.makerInstructionsSelect {
+  font-size: 40px;
   margin: 15px 0px 50px 200px;
   z-index: 1;
   white-space: nowrap;
-}
+}*/
 
 .makerInstructionsFace {
   font-size: 90px;
-  margin: 40px 0px 80px 200px;
+  margin: 150px 0px 80px 200px;
   z-index: 1;
   color: gray;
   font-weight:lighter;
@@ -213,7 +216,7 @@ form {
 
 .makerInstructionsBody {
   font-size: 90px;
-  margin: 60px 0px 80px 200px;
+  margin: 125px 0px 115px 200px;
   z-index: 1;
   color: gray;
   font-weight:lighter;
@@ -278,11 +281,11 @@ form {
 }
 
 .makerInstructionsFollowed {
-  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px green, 0 -6px 7px rgba(0, 0, 0, 0.5);
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #39FF14, 0 -6px 7px rgba(0, 0, 0, 0.5);
 }
 
 .fadeOut {
-  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px green, 0 -6px 7px rgba(0, 0, 0, 0.5);
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #39FF14, 0 -6px 7px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -290,7 +293,9 @@ form {
   text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #ff00aa, 0 -6px 7px rgba(0, 0, 0, 0.5);
 }
 
-
+img:hover {
+  cursor: pointer;
+}
 
 
 #bitzbotMaker {
@@ -305,7 +310,7 @@ form {
   align-items: center;
 }
 .readyIndicator {
-  margin: 80px 80px 80px 0px;
+  margin: 170px 80px 60px 0px;
   width: 100px;
   height: 100px;
   border-radius: 60px;
@@ -332,29 +337,60 @@ input[type="radio"]:checked + label img {
 }
 
 .carousel-indicators{
-  bottom: -15px;
+  bottom: -19px;
 }
 
 .carousel-indicators li {
-  height: 30px;
-  width: 30px;
-  border-radius:6px;
-  border: 5px solid gray;
+  background-color: yellow;
+  margin: 0 20px 0 20px;
+  height: 40px;
+  width: 40px;
+  border: 5px groove gray;
+  border-radius: 0px;
   box-shadow: inset 0px 0px 1px 1px black, 3px 3px 5px 0px black;
 }
 
 .carousel-indicators li:hover {
-  border-radius:6px;
-  box-shadow: inset 0px 0px 2px 2px #FF00AA, 3px 3px 5px 0px #FF00AA;
+  border-radius:0px;
+  border-style: ridge;
+  box-shadow: inset 0px 0px 2px 2px white, 3px 3px 2px 0px gray;
   /*border: 2px solid #FF00AA;*/
   /*text-shadow: 0 0 5px #FF00AA !important;*/
 }
 
-.carousel-indicators .active {
+.carousel-indicators li.active {
   background-color: green;
-  height: 30px;
-  width: 30px;
-  border-radius:6px;
-  border: 5px solid gray;
+  margin: 0 20px 0 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 0px;
+  border: 5px groove gray;
   box-shadow: inset 0px 0px 1px 1px black, 3px 3px 5px 0px black;
+}
+
+.makeButtonWrapper {
+  background-color: gray;
+}
+
+.makeButton {
+  background-color: gray;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 160px;
+  font-size: 40px;
+}
+
+.blink_me {
+  animation: blinker 2s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+.ready {
+  background-color: pink;
 }

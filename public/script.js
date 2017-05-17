@@ -75,6 +75,7 @@ angular.module('bitzbotsApp', ['ngRoute'])
   vm.instructBody = false;
   vm.instructLegs = false;
   vm.legsAreReady = false;
+  vm.makeButtonSet = false;
   vm.make = function(bot) {
     bitzbotService.makeBot(bot);
     $location.path('/bitzprint');
@@ -109,6 +110,7 @@ angular.module('bitzbotsApp', ['ngRoute'])
   vm.selectedLegs = function() {
     vm.instructLegs = false;
     vm.legsAreReady = true;
+    vm.makeButtonSet = true;
   }
 
   // vm.saveSubscriber = function(botBody) {

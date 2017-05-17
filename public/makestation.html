@@ -1,6 +1,6 @@
 <div class="bitzbotMakerContent" class="row">
   <div id="bitzbotMakerInstructions" class="col-sm-2 col-sm-offset-1">
-    <div class="makerInstructionsSelect">Select your Bit-z-Bot's:</div>
+    <!-- <div class="makerInstructionsSelect">MAKESTATION</div> -->
     <div class="makerInstructionsFace" ng-class="{'fadeOut': makeCtrl.faceIsReady}">Face</div>
     <div class="makerInstructionsBody" ng-class="{'fadeOut': makeCtrl.bodyIsReady,'prompt': makeCtrl.instructBody}">Body</div>
     <div class="makerInstructionsLegs" ng-class="{'fadeOut': makeCtrl.legsAreReady, 'prompt': makeCtrl.instructLegs}">Legs</div>
@@ -55,16 +55,12 @@
       <div id="legsCarousel" class="carousel slide" data-interval="false">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#legsCarousel" data-slide-to="0"></li>
+            <li data-target="#legsCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#legsCarousel" data-slide-to="1"></li>
-            <li data-target="#legsCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="item active">
-                <input type="radio" ng-model="bot.legs" value="legs1" id="legs1" /><label for="legs1"><img src="static/legsone.png" alt="First Legs" ng-click="makeCtrl.selectedLegs()"></label>
-            </div>
-            <div class="item">
               <label><input type="radio" ng-model="bot.legs" value="legs2" /><img src="static/legstwo.png" alt="Second Legs" ng-click="makeCtrl.selectedLegs()"></label>
             </div>
             <div class="item">
@@ -72,7 +68,9 @@
             </div>
         </div>
       </div>
-      <input type="submit" ng-click="makeCtrl.make(bot)" class="makeButton" value="MAKE" />
+      <div class="makeButtonWrapper">
+        <input type="submit" ng-click="makeCtrl.make(bot)" class="makeButton" ng-class="{'ready': makeCtrl.makeButtonSet}" value="MAKE" /><span class="blink_me"></span>
+      </div>
     </form>
   </div>
   <div class="readyIndicatorWrapper col-sm-2">
