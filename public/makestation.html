@@ -1,13 +1,18 @@
-<div class="bitzbotMakerContent">
-  <div id="bitzbotMaker" ng-controller="MakestationController as makeCtrl">
-    <div>Select your Bit-z-Bot's face, body and legs!</div>
+<div class="bitzbotMakerContent" class="row">
+  <div id="bitzbotMakerInstructions" class="col-sm-2 col-sm-offset-1">
+    <div class="makerInstructionsSelect">Select your Bit-z-Bot's:</div>
+    <div class="makerInstructionsFace" ng-class="{'fadeOut': makeCtrl.faceIsReady}">Face</div>
+    <div class="makerInstructionsBody">Body</div>
+    <div class="makerInstructionsLegs">Legs</div>
+  </div>
+  <div id="bitzbotMaker" class="col-sm-4">
     <form name="form" class="botMakerForm" novalidate>
       <!-- BITZBOT FACE -->
       <div id="faceCarousel" class="carousel slide" data-interval="false">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
             <li data-target="#faceCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#faceCarousel" data-slide-to="1"></li>
+            <li data-target="#faceCarousel" data-slide-to="1" ng-click="makeCtrl.selectedFace()"></li>
             <li data-target="#faceCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Wrapper for carousel items -->
@@ -22,13 +27,6 @@
                 <label><input type="radio" ng-model="bot.face" value="face3" /><img src="static/facethree.png" alt="Third Face"></label>
             </div>
         </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control faceCtrl left" href="#faceCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left faceCtrl"></span>
-        </a>
-        <a class="carousel-control faceCtrl right" href="#faceCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right faceCtrl"></span>
-        </a>
       </div>
 
       <!-- BITZBOT BODY -->
@@ -45,33 +43,26 @@
                   <label><input type="radio" ng-model="bot.body" value="body1" /><img src="static/bodyone.png" alt="First Body"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.body" value="body2" /><img src="static/bodytwo.png" alt="Second Body"></label>
+              <label><input type="radio" ng-model="bot.body" value="body2" /><img src="static/bodytwo.png" alt="Second Body" ng-click="makeCtrl.selectedSecondBody()"></label>
             </div>
             <div class="item">
               <label><input type="radio" ng-model="bot.body" value="body3" /><img src="static/bodythree.png" alt="Third Body"></label>
             </div>
         </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control left" href="#bodyCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" href="#bodyCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
       </div>
 
       <!-- BITZBOT LEGS -->
       <div id="legsCarousel" class="carousel slide" data-interval="false">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#legsCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#legsCarousel" data-slide-to="0"></li>
             <li data-target="#legsCarousel" data-slide-to="1"></li>
             <li data-target="#legsCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="item active">
-                  <label><input type="radio" ng-model="bot.legs" value="legs1" /><img src="static/legsone.png" alt="First Legs"></label>
+                <input type="radio" ng-model="bot.legs" value="legs1" id="legs1" /><label for="legs1"><img src="static/legsone.png" alt="First Legs"></label>
             </div>
             <div class="item">
               <label><input type="radio" ng-model="bot.legs" value="legs2" /><img src="static/legstwo.png" alt="Second Legs"></label>
@@ -80,20 +71,11 @@
               <label><input type="radio" ng-model="bot.legs" value="legs3" /><img src="static/legsthree.png" alt="Third Legs"></label>
             </div>
         </div>
-        <!-- Carousel controls -->
-        <a class="carousel-control left" href="#legsCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="carousel-control right" href="#legsCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
       </div>
-
-
       <input type="submit" ng-click="makeCtrl.make(bot)" class="makeButton" value="MAKE" />
     </form>
   </div>
-  <div class="readyIndicatorWrapper">
+  <div class="readyIndicatorWrapper col-sm-3">
     <div id="readyOne" class="readyIndicator" ng-class="{'partReady': makeCtrl.faceIsReady}">{{makeCtrl.faceIsReady}}</div>
     <div id="readyTwo" class="readyIndicator"></div>
     <div id="readyThree" class="readyIndicator"></div>

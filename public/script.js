@@ -71,6 +71,8 @@ angular.module('bitzbotsApp', ['ngRoute'])
   vm.hello = "hello";
   vm.bot = {};
   vm.faceIsReady = false;
+  vm.faceTwoIsSelected = false;
+
   vm.make = function(bot) {
     bitzbotService.makeBot(bot);
     $location.path('/bitzprint');
@@ -82,11 +84,27 @@ angular.module('bitzbotsApp', ['ngRoute'])
     console.log('you selected a face');
     vm.faceIsReady = true;
     console.log(vm.faceIsReady);
+    vm.faceTwoIsSelected = true;
   }
+
+  $('#bodyCarousel').on('slide.bs.carousel', function () {
+    $("#faceCarousel .carousel-inner div:first").removeClass("active");
+  });
+
+  // vm.selectedSecondBody = function() {
+  //   $("#faceCarousel .carousel-inner div:first").removeClass("active");
+  // }
   // vm.make = function(bot) {
   //   console.log('MAKING', bot);
   //   $location.path('/bitzprint');
   // }
+  // $('#faceCarousel').on('slide.bs.carousel', function () {
+  //   debugger
+  // });
+
+  // $('#bodyCarousel').on('slide.bs.carousel', function () {
+  //   debugger
+  // });
   console.log('hello from make controller');
 }])
 .controller('BitzprintController', ['$scope', 'bitzbotService', function($scope, bitzbotService) {

@@ -30,6 +30,7 @@ body {
 }
 
 hr {
+  width: 80%;
   border-top: 4px solid #eee;
 }
 
@@ -38,12 +39,12 @@ hr {
   width: 450px;
 }
 
-ul {
+.bitzNavbar ul {
   margin-left: 50px;
   margin-top: 50px;
 }
 
-li {
+.bitzNavbar li {
   box-shadow: 1px 1px 5px #888888;
   font-size: 25px;
   background-color: #cfcffe;
@@ -53,12 +54,12 @@ li {
   display: inline;
 }
 
-a {
+.bitzNavbar a {
   color: black;
   text-decoration: none;
 }
 
-a:hover {
+.bitzNavbar a:hover {
   text-decoration: none;
   text-shadow: 0 0 5px #FF00AA;
 }
@@ -76,7 +77,6 @@ a:hover {
   font-size: 58px;
   font-weight: bold;
 }
-
 
 /*TODO if larger screen, adjust margin-right*/
 .enterMakestationGlyphicon {
@@ -140,24 +140,67 @@ a:hover {
   width: 500px !important;
 }
 
-.beRed {
-  background-color: red;
-}
-
 .makeButton {
   padding-left: 300px;
 }
-form {
-    border: 10px solid gray;
 
+form {
+  border: 10px solid gray;
+  border-top: 30px;
+  border-right: 150px;
+  border-bottom: 10px;
+  border-left: 500px;
+  border-color: gray;
+  border-style: solid;
 }
 
-.bitzbotMakerContent {
+.item {
+  background-color: #B3B3B3;
+}
+/*.bitzbotMakerContent {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 
+}*/
+
+#bitzbotMakerInstructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.makerInstructionsSelect {
+  font-size: 20px;
+  z-index: 1;
+}
+
+.makerInstructionsFace {
+  font-size: 60px;
+  margin: 50px 0px 50px 0;
+  z-index: 1;
+
+}
+
+.makerInstructionsBody {
+  font-size: 60px;
+  margin: 50px;
+  z-index: 1;
+
+}
+
+.makerInstructionsLegs {
+  font-size: 60px;
+  margin: 50px;
+  z-index: 1;
+
+}
+
+.fadeOut {
+  color: pink;
+}
+
+
 
 #bitzbotMaker {
   display: flex;
@@ -171,15 +214,45 @@ form {
   align-items: center;
 }
 .readyIndicator {
-  width: 30px;
-  height: 30px;
-  background-color: red;
+  margin: 80px 80px 80px 0px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  border: 20px solid gray;
+  background: -webkit-linear-gradient(top,  #FF0D0D 0%, #8b0000 100%);
+  /*background-color: #FF0D0D;*/
+  box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7),
+         -4px -4px 20px rgba(0, 0, 0, 0.4);
+;
 }
 
 .partReady {
-  background-color: green;
+  background: -webkit-linear-gradient(top,  #39FF14 0%, #168C00 100%);
 }
 
-input[type="radio"]:checked {
-  border: 3px solid red;
+input[type="radio"]:checked + label img {
+  border-radius:6px;
+  box-shadow: inset 2px 2px 2px 2px #FF00AA, 3px 3px 5px 5px #FF00AA;
+}
+
+.botMakerForm img {
+  margin-left: 100px;
+  height: 250px;
+}
+
+.carousel-indicators{
+  bottom: -15px;
+}
+
+.carousel-indicators li:hover {
+  border-radius:6px;
+  box-shadow: inset 0px 0px 2px 2px #FF00AA, 3px 3px 5px 0px #FF00AA;
+  /*border: 2px solid #FF00AA;*/
+  /*text-shadow: 0 0 5px #FF00AA !important;*/
+}
+
+.carousel-indicators .active {
+  background-color: green;
+  border-radius:6px;
+  box-shadow: inset 0px 0px 2px 2px green, 3px 3px 5px 0px green;
 }
