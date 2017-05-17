@@ -2,8 +2,8 @@
   <div id="bitzbotMakerInstructions" class="col-sm-2 col-sm-offset-1">
     <div class="makerInstructionsSelect">Select your Bit-z-Bot's:</div>
     <div class="makerInstructionsFace" ng-class="{'fadeOut': makeCtrl.faceIsReady}">Face</div>
-    <div class="makerInstructionsBody">Body</div>
-    <div class="makerInstructionsLegs">Legs</div>
+    <div class="makerInstructionsBody" ng-class="{'fadeOut': makeCtrl.bodyIsReady,'prompt': makeCtrl.instructBody}">Body</div>
+    <div class="makerInstructionsLegs" ng-class="{'fadeOut': makeCtrl.legsAreReady, 'prompt': makeCtrl.instructLegs}">Legs</div>
   </div>
   <div id="bitzbotMaker" class="col-sm-4">
     <form name="form" class="botMakerForm" novalidate>
@@ -11,8 +11,8 @@
       <div id="faceCarousel" class="carousel slide" data-interval="false">
         <!-- Carousel indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#faceCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#faceCarousel" data-slide-to="1" ng-click="makeCtrl.selectedFace()"></li>
+            <li data-target="#faceCarousel" data-slide-to="0" class="active" ></li>
+            <li data-target="#faceCarousel" data-slide-to="1"></li>
             <li data-target="#faceCarousel" data-slide-to="2"></li>
         </ol>
         <!-- Wrapper for carousel items -->
@@ -21,10 +21,10 @@
                   <label><input type="radio" ng-model="bot.face" value="face1" /><img src="static/faceone.png" alt="First Face" ng-click="makeCtrl.selectedFace()"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.face" value="face2" /><img src="static/facetwo.png" alt="Second Face"></label>
+              <label><input type="radio" ng-model="bot.face" value="face2" /><img src="static/facetwo.png" alt="Second Face" ng-click="makeCtrl.selectedFace()"></label>
             </div>
             <div class="item">
-                <label><input type="radio" ng-model="bot.face" value="face3" /><img src="static/facethree.png" alt="Third Face"></label>
+                <label><input type="radio" ng-model="bot.face" value="face3" /><img src="static/facethree.png" alt="Third Face" ng-click="makeCtrl.selectedFace()"></label>
             </div>
         </div>
       </div>
@@ -40,13 +40,13 @@
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="item active">
-                  <label><input type="radio" ng-model="bot.body" value="body1" /><img src="static/bodyone.png" alt="First Body"></label>
+                  <label><input type="radio" ng-model="bot.body" value="body1" /><img src="static/bodyone.png" alt="First Body" ng-click="makeCtrl.selectedBody()"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.body" value="body2" /><img src="static/bodytwo.png" alt="Second Body" ng-click="makeCtrl.selectedSecondBody()"></label>
+              <label><input type="radio" ng-model="bot.body" value="body2" /><img src="static/bodytwo.png" alt="Second Body" ng-click="makeCtrl.selectedBody()"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.body" value="body3" /><img src="static/bodythree.png" alt="Third Body"></label>
+              <label><input type="radio" ng-model="bot.body" value="body3" /><img src="static/bodythree.png" alt="Third Body" ng-click="makeCtrl.selectedBody()"></label>
             </div>
         </div>
       </div>
@@ -62,22 +62,22 @@
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="item active">
-                <input type="radio" ng-model="bot.legs" value="legs1" id="legs1" /><label for="legs1"><img src="static/legsone.png" alt="First Legs"></label>
+                <input type="radio" ng-model="bot.legs" value="legs1" id="legs1" /><label for="legs1"><img src="static/legsone.png" alt="First Legs" ng-click="makeCtrl.selectedLegs()"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.legs" value="legs2" /><img src="static/legstwo.png" alt="Second Legs"></label>
+              <label><input type="radio" ng-model="bot.legs" value="legs2" /><img src="static/legstwo.png" alt="Second Legs" ng-click="makeCtrl.selectedLegs()"></label>
             </div>
             <div class="item">
-              <label><input type="radio" ng-model="bot.legs" value="legs3" /><img src="static/legsthree.png" alt="Third Legs"></label>
+              <label><input type="radio" ng-model="bot.legs" value="legs3" /><img src="static/legsthree.png" alt="Third Legs" ng-click="makeCtrl.selectedLegs()"></label>
             </div>
         </div>
       </div>
       <input type="submit" ng-click="makeCtrl.make(bot)" class="makeButton" value="MAKE" />
     </form>
   </div>
-  <div class="readyIndicatorWrapper col-sm-3">
-    <div id="readyOne" class="readyIndicator" ng-class="{'partReady': makeCtrl.faceIsReady}">{{makeCtrl.faceIsReady}}</div>
-    <div id="readyTwo" class="readyIndicator"></div>
-    <div id="readyThree" class="readyIndicator"></div>
+  <div class="readyIndicatorWrapper col-sm-2">
+    <div id="readyOne" class="readyIndicator" ng-class="{'partReady': makeCtrl.faceIsReady}"></div>
+    <div id="readyTwo" class="readyIndicator" ng-class="{'partReady': makeCtrl.bodyIsReady}"></div>
+    <div id="readyThree" class="readyIndicator" ng-class="{'partReady': makeCtrl.legsAreReady}"></div>
   </div>
 </div>

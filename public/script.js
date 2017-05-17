@@ -71,25 +71,54 @@ angular.module('bitzbotsApp', ['ngRoute'])
   vm.hello = "hello";
   vm.bot = {};
   vm.faceIsReady = false;
-  vm.faceTwoIsSelected = false;
-
+  vm.bodyIsReady = false;
+  vm.instructBody = false;
+  vm.instructLegs = false;
+  vm.legsAreReady = false;
   vm.make = function(bot) {
     bitzbotService.makeBot(bot);
     $location.path('/bitzprint');
   };
 
   // todo this needs to be a toggle
+  vm.selectedFace1 = function(){
+    $("#radioFace1").prop("checked", true)
+  }
+
+  vm.selectedFace2 = function(){
+    $("#radioFace2").prop("checked", true)
+  }
   vm.selectedFace = function(){
+
     console.log(vm.faceIsReady);
     console.log('you selected a face');
     vm.faceIsReady = true;
     console.log(vm.faceIsReady);
     vm.faceTwoIsSelected = true;
+    vm.instructBody = true;
   }
 
-  $('#bodyCarousel').on('slide.bs.carousel', function () {
-    $("#faceCarousel .carousel-inner div:first").removeClass("active");
-  });
+  vm.selectedBody = function(){
+    vm.instructBody = false;
+    vm.bodyIsReady = true;
+    vm.instructLegs = true;
+
+    console.log('selected body')
+  }
+
+  vm.selectedLegs = function() {
+    vm.instructLegs = false;
+    vm.legsAreReady = true;
+  }
+
+  // vm.saveSubscriber = function(botBody) {
+  //   console.log('SELECTING BOTBODY', botBody)
+  // }
+
+
+  // $('#bodyCarousel').on('slide.bs.carousel', function () {
+  //   $("#faceCarousel .carousel-inner div:first").removeClass("active");
+  // });
 
   // vm.selectedSecondBody = function() {
   //   $("#faceCarousel .carousel-inner div:first").removeClass("active");

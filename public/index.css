@@ -147,15 +147,18 @@ hr {
 form {
   border: 10px solid gray;
   border-top: 30px;
-  border-right: 150px;
+  border-right: 250px;
   border-bottom: 10px;
-  border-left: 500px;
+  border-left: 350px;
   border-color: gray;
   border-style: solid;
+  border-radius: 6px;
 }
 
 .item {
+  padding: 10px;
   background-color: #B3B3B3;
+  border-bottom: 35px solid darkgray;
 }
 /*.bitzbotMakerContent {
   display: flex;
@@ -171,34 +174,122 @@ form {
 }
 
 .makerInstructionsSelect {
-  font-size: 20px;
+  font-size: 25px;
+  margin: 15px 0px 50px 200px;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .makerInstructionsFace {
-  font-size: 60px;
-  margin: 50px 0px 50px 0;
+  font-size: 90px;
+  margin: 40px 0px 80px 200px;
   z-index: 1;
+  color: gray;
+  font-weight:lighter;
+  letter-spacing: -6px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #ff00AA, 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
 
+.makerInstructionsFace::before
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#fff;
+  left:0;
+  right:0;
+}
+
+.makerInstructionsFace::after
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#525b73;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  left:0;
+  right:0;
 }
 
 .makerInstructionsBody {
-  font-size: 60px;
-  margin: 50px;
+  font-size: 90px;
+  margin: 60px 0px 80px 200px;
   z-index: 1;
+  color: gray;
+  font-weight:lighter;
+  letter-spacing: -6px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px gray, 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
 
+.makerInstructionsBody::before
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#fff;
+  left:0;
+  right:0;
+}
+
+.makerInstructionsBody::after
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#525b73;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  left:0;
+  right:0;
 }
 
 .makerInstructionsLegs {
-  font-size: 60px;
-  margin: 50px;
+  font-size: 90px;
+  margin: 100px 0px 50px 200px;
   z-index: 1;
+  color: gray;
+  font-weight:lighter;
+  letter-spacing: -6px;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px gray, 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
 
+.makerInstructionsLegs::before
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#fff;
+  left:0;
+  right:0;
+}
+
+.makerInstructionsLegs::after
+{
+  /*content:"Shooon";*/
+  text-transform:uppercase;
+  position:absolute;
+  color:#525b73;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  left:0;
+  right:0;
+}
+
+.makerInstructionsActive {
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #ff00AA, 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
+
+.makerInstructionsFollowed {
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px green, 0 -6px 7px rgba(0, 0, 0, 0.5);
 }
 
 .fadeOut {
-  color: pink;
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px green, 0 -6px 7px rgba(0, 0, 0, 0.5);
+
 }
+
+.prompt {
+  text-shadow:-1px -1px 0 black, 1px 1px 0 black, -1px 0 0 black, 1px 0 0 black, 0 3px 4px #ff00aa, 0 -6px 7px rgba(0, 0, 0, 0.5);
+}
+
 
 
 
@@ -244,6 +335,14 @@ input[type="radio"]:checked + label img {
   bottom: -15px;
 }
 
+.carousel-indicators li {
+  height: 30px;
+  width: 30px;
+  border-radius:6px;
+  border: 5px solid gray;
+  box-shadow: inset 0px 0px 1px 1px black, 3px 3px 5px 0px black;
+}
+
 .carousel-indicators li:hover {
   border-radius:6px;
   box-shadow: inset 0px 0px 2px 2px #FF00AA, 3px 3px 5px 0px #FF00AA;
@@ -253,6 +352,9 @@ input[type="radio"]:checked + label img {
 
 .carousel-indicators .active {
   background-color: green;
+  height: 30px;
+  width: 30px;
   border-radius:6px;
-  box-shadow: inset 0px 0px 2px 2px green, 3px 3px 5px 0px green;
+  border: 5px solid gray;
+  box-shadow: inset 0px 0px 1px 1px black, 3px 3px 5px 0px black;
 }
