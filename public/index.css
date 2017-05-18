@@ -326,6 +326,10 @@ img:hover {
   background: -webkit-linear-gradient(top,  #39FF14 0%, #168C00 100%);
 }
 
+input[type="radio"] {
+  display: none;
+}
+
 input[type="radio"]:checked + label img {
   border-radius:6px;
   box-shadow: inset 2px 2px 2px 2px #FF00AA, 3px 3px 5px 5px #FF00AA;
@@ -393,4 +397,8 @@ input[type="radio"]:checked + label img {
 
 .ready {
   background-color: pink;
+}
+
+.madeBot {
+  margin-left: 30%;
 }
