@@ -144,7 +144,7 @@ hr {
   padding-left: 300px;
 }
 
-form {
+.botMakerForm {
   margin: 30px 0 50px 0;
   border-top: 30px;
   border-right: 250px;
@@ -396,9 +396,51 @@ input[type="radio"]:checked + label img {
 }
 
 .ready {
-  background-color: pink;
+  background-color: mediumpurple;
+  text-shadow: 3px 3px #39FF14;
 }
 
 .madeBot {
-  margin-left: 30%;
+  margin: 30px 0 50px 300px;
+  border-top: 30px;
+  border-right: 650px;
+  border-bottom: 30px;
+  border-left: 175px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 40px;
+  box-shadow: -10px -2px 9px rgba(0, 0, 0, 0.7), -4px -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.madeBotDownload {
+  margin: 125px 0 0 -70px;
+  background-color: black;
+  color: #39FF14;
+    width: 570px;
+  height: 450px;
+}
+
+.madeBotDownload a {
+
+  color: #39FF14;
+  font-size: 32px;
+}
+
+.downloadBotLink {
+  padding-bottom: 115px;
+}
+
+.downloadBotLink a {
+  font-size: 50px;
+  text-shadow: 3px 3px medium purple;
+}
+
+.botPrintFormText {
+  color: black;
+  background-color: #cfcffe;
+}
+
+
+.font32 {
+  font-size: 32px;
 }

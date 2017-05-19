@@ -1,22 +1,26 @@
-<div class="madeBotWrapper">
-    <img src="./static/madeBotsImages/{{printCtrl.bot}}.png" class="madeBot"/>
-<div>
+<div class="row">
+
+  <div class="madeBotWrapper col-sm-6">
+      <img src="./static/madeBotsImages/{{printCtrl.bot}}.png" class="madeBot"/>
+  </div>
+
+
+  <!-- FOR PRODUCTION DEPLOY -->
+  <div class="col-sm-4 madeBotDownload">
+      <h2 class="downloadBotLink"><a href="./111.stl" target="_self"> >> Download to print your Bit-z-bot!</a></h2>
+
+
+  <!-- FOR MAKER FAIRE -->
+    <!-- name your bitzbot -->
+    <form>
+      <span class="font32"> Enter your email: </span><input type="text" class="botPrintFormText" ng-model="printCtrl.userEmail">
+
+    <a href="mailto:anne.bitzbots@gmail.com?Subject=Print%20{{printCtrl.bot}}%20from%20MakerFaire&Body=Hi, please print BitzBot {{printCtrl.bot}} for {{printCtrl.userEmail}}"target="_top"> >> Send your Bit-z-bot via email (so you can print it at home!)</a>
 
 
 
-<h2>
-  <a href="./111.stl" target="_self">Download to print your Bit-z-bot!</a></h2>
-  <!-- name your bitzbot -->
-<!-- todo ask for email input here -->
-<!-- <form>
-  Enter your email: <input type="text" ng-model="printCtrl.userEmail">
-
-  Attach stl file: <input type="file" name="attachedfile" MAXLENGTH=50 ALLOW="text/*" >
-<a href="mailto:anne.bitzbots@gmail.com?Subject=Print%20{{printCtrl.bot}}%20from%20MakerFaire&Body=Hi, please print BitzBot for {{printCtrl.userEmail}}"target="_top">Send your Bit-z-bot via email (so you can print it at home!)</a>
-
-
-
-</form> -->
+    </form>
+  </div>
 
 
 <!-- <form method="post" action="mailto:anne.bitzbots@gmail.com" ENCTYPE="multipart/form-data">
