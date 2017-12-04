@@ -147,9 +147,9 @@ hr {
 .botMakerForm {
   margin: 30px 0 50px 0;
   border-top: 30px;
-  border-right: 250px;
+  border-right: 200px;
   border-bottom: 10px;
-  border-left: 350px;
+  border-left: 250px;
   border-color: gray;
   border-style: solid;
   border-radius: 40px;
@@ -184,8 +184,8 @@ hr {
 }*/
 
 .makerInstructionsFace {
-  font-size: 90px;
-  margin: 150px 0px 80px 200px;
+  font-size: 85px;
+  margin: 150px 0px 80px -80px;
   z-index: 1;
   color: gray;
   font-weight:lighter;
@@ -215,8 +215,8 @@ hr {
 }
 
 .makerInstructionsBody {
-  font-size: 90px;
-  margin: 125px 0px 115px 200px;
+  font-size: 85px;
+  margin: 125px 0px 115px -80px;
   z-index: 1;
   color: gray;
   font-weight:lighter;
@@ -246,8 +246,8 @@ hr {
 }
 
 .makerInstructionsLegs {
-  font-size: 90px;
-  margin: 100px 0px 50px 200px;
+  font-size: 85px;
+  margin: 100px 0px 50px -80px;
   z-index: 1;
   color: gray;
   font-weight:lighter;
@@ -310,7 +310,7 @@ img:hover {
   align-items: center;
 }
 .readyIndicator {
-  margin: 170px 80px 60px 0px;
+  margin: 170px -115px 60px 0px;
   width: 100px;
   height: 100px;
   border-radius: 60px;
